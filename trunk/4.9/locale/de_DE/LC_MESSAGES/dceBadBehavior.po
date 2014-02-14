@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dceBadBehavior Plugin V 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-07 04:23+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ortwin Pinke <translation@dceonline.de>\n"
+"Language-Team: DCEonline <translate@dceonline.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-KeywordsList: i18n;__\n"
+"X-Poedit-Basepath: W:\\_dev\\con4812\\contenido\\plugins\\\n"
+"X-Poedit-SearchPath-0: dceBadBehavior\n"
+"X-Poedit-SearchPath-1: dceBadBehavior\\bad-behavior\n"
+
+#: dceBadBehavior/bad-behavior-for-contenido.php:124
+#: dceBadBehavior/bad-behavior/bad-behavior-wordpress-admin.php:22
+#: dceBadBehavior/bad-behavior/bad-behavior-wordpress-admin.php:24
+#: dceBadBehavior/bad-behavior/bad-behavior-generic.php:128
+#: dceBadBehavior/bad-behavior/bad-behavior-wordpress.php:141
+msgid "Bad Behavior"
+msgstr "Bad Behavior"
+
+#: dceBadBehavior/bad-behavior-for-contenido.php:124
+#: dceBadBehavior/bad-behavior/bad-behavior-generic.php:128
+#: dceBadBehavior/bad-behavior/bad-behavior-wordpress.php:141
+msgid "has blocked"
+msgstr "hat geblockt"
+
+#: dceBadBehavior/bad-behavior-for-contenido.php:124
+#: dceBadBehavior/bad-behavior/bad-behavior-generic.php:128
+#: dceBadBehavior/bad-behavior/bad-behavior-wordpress.php:141
+msgid "access attempts in the last 7 days."
+msgstr "Zugriffsversuche der letzten 7 Tage."
+
+#: dceBadBehavior/bad-behavior/bad-behavior/banned.inc.php:35
+msgid "We're sorry, but we could not fulfill your request for"
+msgstr "Leider können wir Ihre Anfrage nicht beantworten"
+
