@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin>
+    <general active="1">
+        <plugin_name>BadBehavior for Contenido</plugin_name>
+        <plugin_foldername>dceBadBehavior</plugin_foldername>
+        <!-- UUID generated 17.02.2014 at http://www.contenido.org/de/cms/Home/index-c-1972-3.html -->
+        <uuid>ECDB72BE-D0C5-76B6-61CF-F0A7E71A7234</uuid>
+        <description>BadBehavior 2.2 for Contenido 4.9 - The Web's premier link spam killer. More info about BadBehavior see http://bad-behavior.ioerror.us/</description>
+        <author>Ortwin Pinke</author>
+        <copyright>Ortwin Pinke</copyright>
+        <mail>plugins@php-backoffice.de</mail>
+        <website>http://php-backoffice.de</website>
+        <version>2.0.0</version>
+    </general>
+    <requirements php="5.2.3">
+        <contenido minversion="4.9.3" />
+    </requirements>
+    <contenido>
+        <areas>
+            <area parent="0" menuless="1">dceBadBehavior</area>
+        </areas>
+        <actions>
+            <action area="dceBadBehavior">dceBadBehavior</action>
+        </actions>
+        <frames>
+            <frame area="dceBadBehavior" filetype="main" name="dceBadBehavior/includes/include.dceBadBehavior.overview.php" frameId="4" />
+        </frames>
+        <nav_sub>
+            <nav area="dceBadBehavior" level="0" navm="3">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/main</nav>            
+            <nav area="dceBadBehavior" level="1" navm="0">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/overview</nav>
+        </nav_sub>
+    </contenido>
+</plugin>
