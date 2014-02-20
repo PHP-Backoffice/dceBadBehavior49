@@ -5,24 +5,14 @@
  * Description:
  * readme file
  *
- * Requirements:
- * @con_php_req 5.0
- *
- *
  * @package    dceBadBehavior plugin
- * @version    0.1.0
+ * @version    $Rev:$
  * @author     Ortwin Pinke
  * @copyright  Copyright (c) 2010, Ortwin Pinke <www.dceonline.de>
  * @license    GPL
  * @link       http://www.dceonline.de
  *
- * @todo       (adding todo's here)
- *
- * {@internal
- *   created 2010
- *
- *   $Id$
- * }}
+ * $Id$
  */
 
 
