@@ -1,53 +1,41 @@
 <?php
 /**
- * Project:
- * dceBadBehavior Plugin
- *
- * Description:
- *
- *
- * Requirements:
- * @con_php_req 5.0
- *
- *
- * @package    dceBadBehavior plugin
- * @version    0.1.0
+ * @package    plugins
+ * @subpackage dceBadBehavior
+ * @version    $Rev:$
  * @author     Ortwin Pinke
- * @copyright  Copyright (c) 2010, Ortwin Pinke <www.dceonline.de>
+ * @copyright  Ortwin Pinke <www.dceonline.de>
  * @license    GPL
  * @link       http://www.dceonline.de
  *
- * @todo       (adding todo's here)
- *
- * {@internal
- *   created 2010
- *
  *   $Id$
- * }}
- *
  */
 
 defined('CON_FRAMEWORK') or die('Illegal call');
 
 $sPluginName = 'dceBadBehavior';
 
-if (!isset($GLOBALS['contenido'])) {
+// define table names
+$cfg['tab']['bad_behavior'] = $cfg['sql']['sqlprefix'] . '_pibad_behavior';
+$cfg['tab']['bad_behavior_conf'] = $cfg['sql']['sqlprefix'] . '_pibad_behavior_conf';
 
+if(strstr(session_name(), "frontend")) {
+//echo "go";
     // we need db connection
-    $db = new DB_Contenido();
+    $db = cRegistry::getDb();
 
     $bb2_settings_defaults = array(
-                            'log_table' => $cfg['sql']['sqlprefix'].'_bad_behavior',                             
+                            'log_table' => $cfg['tab']['bad_behavior'],                             
                              'display_stats' => false,
                              'strict' => false,
-                             'verbose' => false,
+                             'verbose' => true,
                              'logging' => true,
                              'httpbl_key' => '',
                              'httpbl_threat' => '25',
                              'httpbl_maxage' => '30',
                              'offsite_forms' => false,
                              // ads only for future use with contenido
-                             'conf_table' => $cfg['sql']['sqlprefix'].'_bad_behavior_conf',
+                             'conf_table' => $cfg['tab']['bad_behavior_conf'],
                              'support-email' => 'you@yourdomain.tld'
                          );
 
