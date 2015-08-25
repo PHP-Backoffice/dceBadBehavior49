@@ -6,7 +6,7 @@
  * readme file
  *
  * @package    dceBadBehavior plugin
- * @version    $Rev:$
+ * @version    $Rev$
  * @author     Ortwin Pinke
  * @copyright  Copyright (c) 2010, Ortwin Pinke <www.dceonline.de>
  * @license    GPL

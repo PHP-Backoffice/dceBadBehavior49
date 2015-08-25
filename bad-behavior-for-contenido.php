@@ -59,7 +59,7 @@ function bb2_db_affected_rows() {
  * @return string , escaped string
  */
 function bb2_db_escape($string) {
-	return mysql_real_escape_string($string);
+	return cSecurity::escapeDB($string, cRegistry::getDb());
 }
 
 /**
@@ -194,7 +194,6 @@ function bb2_relative_path() {
 
 
 // Calls inward to Bad Behavor itself.
-require_once(BB2_CWD . "/bad-behavior/version.inc.php");
 require_once(BB2_CWD . "/bad-behavior/core.inc.php");
 require_once(BB2_CWD . "/bad-behavior-mysql.php");
 
