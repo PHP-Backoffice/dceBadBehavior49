@@ -24,6 +24,7 @@
         </actions>
         <frames>
             <frame area="dceBadBehavior" filetype="main" name="dceBadBehavior/includes/include.dceBadBehavior.overview.php" frameId="4" />
+            <frame area="dceBadBehavior" filetype="inc" name="dceBadBehavior/includes/include.dceBadBehavior.ajax.php" frameId="4" />
         </frames>
         <nav_sub>
             <nav area="dceBadBehavior" level="0" navm="3">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/main</nav>            
