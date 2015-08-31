@@ -16,8 +16,8 @@ defined('CON_FRAMEWORK') or die('Illegal call');
 class cApiBadBehaviorCollection extends ItemCollection {
 
     public function __construct() {
-        $cfgTab = cRegistry::getConfigValue("tab");
-        parent::__construct($cfgTab['bad_behavior'], 'idbad_behavior');
+        $aPluginConf = cRegistry::getConfigValue("plugins", "dceBadBehavior");
+        parent::__construct($aPluginConf['tab']['bad_behavior'], 'idbad_behavior');
         $this->_setItemClass('cApiShortUrl');
     }
 
@@ -26,8 +26,8 @@ class cApiBadBehaviorCollection extends ItemCollection {
 class cApiBadBehavior extends Item {
 
     public function __construct($id = false) {
-        $cfgTab = cRegistry::getConfigValue("tab");
-        parent::__construct($cfgTab['bad_behavior'], 'idbad_behavior');
+        $aPluginConf = cRegistry::getConfigValue("plugins", "dceBadBehavior");
+        parent::__construct($aPluginConf['tab']['bad_behavior'], 'idbad_behavior');
         if ($id !== false) {
             $this->loadByPrimaryKey($id);
         }
