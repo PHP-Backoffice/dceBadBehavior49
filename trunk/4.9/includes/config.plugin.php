@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @package    plugins
  * @subpackage dceBadBehavior
@@ -13,27 +12,14 @@
  */
 defined('CON_FRAMEWORK') or die('Illegal call');
 
-$sPluginName = 'dceBadBehavior';
-
-$sPluginAutoloadClassPath = "contenido".DIRECTORY_SEPARATOR.$sPluginName.DIRECTORY_SEPARATOR."classes".DIRECTORY_SEPARATOR;
-cAutoload::addClassmapConfig(array(
-    "cApiBadBehaviorCollection" => $sPluginAutoloadClassPath."class.badbehavior.php",
-    "cApiBadBehavior" => $sPluginAutoloadClassPath."class.badbehavior.php"
-));
-
-if(!cAutoload::isAutoloadable("phpbo".DIRECTORY_SEPARATOR."class.plugin.handler.php")) {
-    cAutoload::addClassmapConfig(array(
-        "phpboPluginHandler" => $sPluginAutoloadClassPath."phpbo".DIRECTORY_SEPARATOR."class.plugin.handler.php"
-    ));
-}
-
-// define table names
-$cfg['tab']['bad_behavior'] = $cfg['sql']['sqlprefix'] . '_pibad_behavior';
-$cfg['tab']['bad_behavior_conf'] = $cfg['sql']['sqlprefix'] . '_pibad_behavior_conf';
-
-if (strstr(session_name(), "frontend")) {
-    $bb2_settings_defaults = array(
-        'log_table' => $cfg['tab']['bad_behavior'],
+// define plugin cfg
+$cfg['plugins']['dceBadBehavior'] = array(
+    'name' => 'dceBadBehavior',
+    'tab' => array(
+        'bad_behavior' => $cfg['sql']['sqlprefix'] . '_pibad_behavior'
+    ),
+    'settings' => array(
+        'log_table' => $cfg['sql']['sqlprefix'] . '_pibad_behavior',
         'display_stats' => false,
         'strict' => false,
         'verbose' => true,
@@ -46,10 +32,27 @@ if (strstr(session_name(), "frontend")) {
 	'reverse_proxy' => false,
 	'reverse_proxy_header' => 'X-Forwarded-For',
 	'reverse_proxy_addresses' => array()
-    );
+    )
+);
+
+$sPluginAutoloadClassPath = "contenido".DIRECTORY_SEPARATOR.cRegistry::getConfigValue('path', 'plugins').$cfg['plugins']['dceBadBehavior']['name'].DIRECTORY_SEPARATOR."classes".DIRECTORY_SEPARATOR;
+cAutoload::addClassmapConfig(array(
+    "cApiBadBehaviorCollection" => $sPluginAutoloadClassPath."class.badbehavior.php",
+    "cApiBadBehavior" => $sPluginAutoloadClassPath."class.badbehavior.php"
+));
+
+if(!cAutoload::isAutoloadable("phpbo".DIRECTORY_SEPARATOR."class.plugin.handler.php")) {
+    cAutoload::addClassmapConfig(array(
+        "phpboPluginHandler" => $sPluginAutoloadClassPath."phpbo".DIRECTORY_SEPARATOR."class.plugin.handler.php"
+    ));
+}
+
+
+if (strstr(session_name(), "frontend")) {
+    $aCfgBB = cRegistry::getConfigValue('plugins', 'dceBadBehavior');
+    $bb2_settings_defaults = $aCfgBB['settings'];
     cInclude("plugins", "dceBadBehavior/bad-behavior-for-contenido.php");
     // Add function for hook "after plugins loaded" to Contenido Extension Chainer
     $_cecRegistry->addChainFunction('Contenido.Frontend.AfterLoadPlugins', 'bb2_startup');
 }
-unset($sPluginName);
 ?>

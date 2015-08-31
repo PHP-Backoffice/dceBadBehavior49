@@ -8,16 +8,20 @@ and open the template in the editor.
     Author     : oldperl
 */
 
+body {
+    padding-bottom: 30px;
+}
+
 #bb_content {
     max-width: 950px;
 }
 
-#bb_content .bb_content_box {
+#bb_content .bb_content_box, #bb_entry {
     margin: 0 0 6px 0;
     border: 1px solid lightgrey;
 }
 
-#bb_content .bb_content_box h3 {
+#bb_content .bb_content_box h3, #bb_entry h3 {
     padding: 2px;
     background-color: darkgrey;
     color: #fff;
@@ -38,4 +42,28 @@ and open the template in the editor.
 
 #contenido_notification {
     display: none;
+}
+
+#bb_entry {
+    position: relative;
+    min-width: 190px;
+    max-width: 300px;
+    min-height: 250px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+#bb_info, #bb_help {
+    padding: 25px;
+    background-color: #fff;
+    overflow: auto;
+    border: 3px solid lightgreen;
+}
+
+#bb_entry #but_cancel {
+    position: absolute;
+    width: 20px;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
 }

@@ -16,7 +16,7 @@ if (isset($_REQUEST['ajax_action'])) {
                 array('db'=>'key','dt'=>1),
                 array(
                     'db'=>'date',
-                    'dt'=>'2',
+                    'dt'=>2,
                     'formatter'=>function($d, $row){
                         return date('jS M y', strtotime($d));
                     }
@@ -30,9 +30,18 @@ if (isset($_REQUEST['ajax_action'])) {
                 'db' => $aDbCon['database'],
                 'host' => $aDbCon['host']
             );
-            echo json_encode(SSP::simple($_GET, $aSqlParam, $cfg['tab']['bad_behavior'],"idbad_behavior", $aColumns));
+            echo json_encode(SSP::simple($_GET, $aSqlParam, $aPluginConf['tab']['bad_behavior'],"idbad_behavior", $aColumns));
             break;
-
+        
+        case 'get_log_entry':
+            if(isset($_POST[bbid])) {
+                $oEntry = new cApiBadBehavior((int) $_POST['bbid']);
+                if($oEntry->isLoaded()) {
+                    echo json_encode($oEntry->toArray());
+                }
+            }
+            break;
+        
         default:
             echo "error:no action:" . $_REQUEST['ajax_action'];
     }
