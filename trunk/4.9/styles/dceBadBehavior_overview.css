@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25.08.2015, 09:17:52
+    Author     : oldperl
+*/
+
+#bb_content {
+    max-width: 950px;
+}
+
+#bb_content .bb_content_box {
+    margin: 0 0 6px 0;
+    border: 1px solid lightgrey;
+}
+
+#bb_content .bb_content_box h3 {
+    padding: 2px;
+    background-color: darkgrey;
+    color: #fff;
+    text-shadow: 1px 1px #111;
+}
+
+#bb_content .bb_content_box .bb_content_box_content {
+    min-height: 30px;
+    padding: 0 4px;
+}
+
+#badbehavior_data_wrapper {
+    margin: 6px 0;
+}
+
+#footer {position: fixed; bottom: 0.6em; right: 0.6em; color: #666; font-weight: normal; font-size: 0.8em;}
+
+
+#contenido_notification {
+    display: none;
+}

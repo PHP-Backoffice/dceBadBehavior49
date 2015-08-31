@@ -17,11 +17,30 @@ defined('CON_FRAMEWORK') || die('Illegal call: Missing framework initialization 
 
 class dceBadBehavior extends cGuiPage {
     
+    private $_oPluginHandler;
+
+
+    public function __construct($pageName, $pluginName = '', $subMenu = '') {
+        parent::__construct($pageName, $pluginName, $subMenu);
+        $this->_oPluginHandler = new phpboPluginHandler();
+        if(!empty($pluginName)) {
+            $this->_oPluginHandler->initByFolderName($pluginName);
+        }
+    }
+    
+    public function getAbsHtmlPath() {
+        return cRegistry::getBackendUrl().cRegistry::getConfigValue("path", "plugins").$this->_pluginName.DIRECTORY_SEPARATOR;
+    }
 }
 
 $oPage = new dceBadBehavior("dceBadBehavior_overview", "dceBadBehavior", "1");
+$oPage->addStyle($oPage->getAbsHtmlPath()."libs/DataTables/datatables.min.css");
+$oPage->addScript($oPage->getAbsHtmlPath()."libs/DataTables/datatables.min.js");
+$oPage->addScript($oPage->getAbsHtmlPath()."libs/DataTables/plugins/dataTables.select.min.js");
 
 $user = new cApiUser($auth->auth["uid"]);
+
+$oPage->set('s', 'LOG_SECTION_H3_HTML', i18n("Bad Behavior Log", "dceBadBehavior"));
 
 $oPage->render();
 ?>
