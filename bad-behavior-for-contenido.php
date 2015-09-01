@@ -2,7 +2,7 @@
 /**
  * @package    Plugins
  * @subpackage dceBadBehavior
- * @version    $Rev:$
+ * @version    $Rev$
  * @author     Ortwin Pinke
  * @copyright  Ortwin Pinke <www.dceonline.de>
  * @license    GPL
