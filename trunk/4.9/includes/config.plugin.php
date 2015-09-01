@@ -38,7 +38,8 @@ $cfg['plugins']['dceBadBehavior'] = array(
 $sPluginAutoloadClassPath = "contenido".DIRECTORY_SEPARATOR.cRegistry::getConfigValue('path', 'plugins').$cfg['plugins']['dceBadBehavior']['name'].DIRECTORY_SEPARATOR."classes".DIRECTORY_SEPARATOR;
 cAutoload::addClassmapConfig(array(
     "cApiBadBehaviorCollection" => $sPluginAutoloadClassPath."class.badbehavior.php",
-    "cApiBadBehavior" => $sPluginAutoloadClassPath."class.badbehavior.php"
+    "cApiBadBehavior" => $sPluginAutoloadClassPath."class.badbehavior.php",
+    "dceBadBehaviorGui" => $sPluginAutoloadClassPath."class.badbehavior.gui.php"
 ));
 
 if(!cAutoload::isAutoloadable("phpbo".DIRECTORY_SEPARATOR."class.plugin.handler.php")) {
