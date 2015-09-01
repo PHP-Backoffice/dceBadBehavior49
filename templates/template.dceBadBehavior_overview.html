@@ -1,23 +1,23 @@
 <div id="bb_content">
     <section id="bb_log" class="bb_content_box" style="position: relative;">
         <h3>{LOG_SECTION_H3_HTML}</h3>
-        <img id="but_info_img" style="position: absolute; top: 2px; right: 2px;" src="images/info.gif" alt="more Informations" title="more Informations" />
+        <img id="but_info_img" style="position: absolute; top: 2px; right: 2px;" src="images/info.gif" alt="{TXT_MORE_INFO}" title="{TXT_MORE_INFO}" />
         <div class="bb_content_box_content">
             <table id="badbehavior_data" class="display">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Key</th>
-                        <th>Date</th>
-                        <th>Agent</th>
+                        <th>{TXT_TH_0}</th>
+                        <th>{TXT_TH_1}</th>
+                        <th>{TXT_TH_2}</th>
+                        <th>{TXT_TH_3}</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Id</th>
-                        <th>Key</th>
-                        <th>Date</th>
-                        <th>Agent</th>
+                        <th>{TXT_TH_0}</th>
+                        <th>{TXT_TH_1}</th>
+                        <th>{TXT_TH_2}</th>
+                        <th>{TXT_TH_3}</th>
                     </tr>
                 </tfoot>
             </table>
@@ -27,11 +27,11 @@
         <h3>{OPTIONS_SECTION_H3_HTML}</h3>
         <div class="bb_content_box_content" style="position: relative;">
             <input id="bb-client-activate" type="checkbox" checked="checked" disabled="disabled" />
-            <label for="bb-client-activate">Activate BB for Client</label>
-            <input id="bb-log-activate" type="checkbox" checked="checked" disabled="disabled" />
-            <label for="bb-log-activate">Log spam</label> (
-            <input id="bb-log-verbose" type="checkbox" checked="checked" disabled="disabled" />
-            <label for="bb-log-verbose">also no spam</label>)
+            <label for="bb-client-activate">{TXT_LABEL_CLIENT}</label>
+            <input id="bb-log-activate" type="checkbox"{INPUT_LOG_ACTIVE_SELECTED} disabled="disabled" />
+            <label for="bb-log-activate">{TXT_LABEL_LOG}</label> (
+            <input id="bb-log-verbose" type="checkbox"{INPUT_LOG_VERBOSE_SELECTED} disabled="disabled" />
+            <label for="bb-log-verbose">{TXT_LABEL_VERBOSE}</label>)
             <div style="position: absolute;left: 0;top: 0;right: 0;bottom: 0;"></div>
         </div>
     </section>
@@ -48,10 +48,12 @@
     <h3>Info!</h3>
     <p id="bb_info_data">These functions are only available in pro-version of the plugin</p>
     <p>You may order the pro-version by clicking on the link below</p>
-    <a href="http://php-backoffice.de" target="_blank" title="Order now: dceBadBehavior Pro for CONTENDIO 4.9">Order now: dceBadBehavior Pro for CONTENDIO 4.9</a>
+    <a href="{INFO_URL}" target="_blank" title="Order now: dceBadBehavior Pro for CONTENDIO 4.9">Order now: dceBadBehavior Pro for CONTENDIO 4.9</a>
 </section>
 <section id="bb_help" style="display: none; text-align: center;" class="bb_content_box">
     <h3>&Uuml;ber dceBadBehavior f&uuml;r CONTENIDO 4.9!</h3>
     <h5>&copy; 2015 DCEonline, Internet- und Werbeagentur</h5>
-    <p>Sie nutzen derzeit die kostenlose Version unseres Plugins. Diese ist in Ihrem Funktionsumfang eingeschränkt.<br/>Folgende Funktionen stehen Ihnen zur Verfügung</p>
+    <p>Sie nutzen derzeit die kostenlose Version unseres Plugins. Diese ist in Ihrem Funktionsumfang eingeschränkt.
+        <br/>Weitere Informationen zu den Unterschieden von Free- und Pro-Version finden sie in der <a href="{DOKU_URL}" target="_blank">Doku</a>
+        <br/>oder unter dem folgenden <a href="{INFO_URL}" target="_blank">Link</a></p>
 </section>
