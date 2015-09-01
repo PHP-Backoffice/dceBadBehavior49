@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <plugin>
     <general active="1">
-        <plugin_name>BadBehavior for Contenido</plugin_name>
+        <plugin_name>BadBehavior for Contenido (Free Version)</plugin_name>
         <plugin_foldername>dceBadBehavior</plugin_foldername>
         <!-- UUID generated 17.02.2014 at http://www.contenido.org/de/cms/Home/index-c-1972-3.html -->
         <uuid>ECDB72BE-D0C5-76B6-61CF-F0A7E71A7234</uuid>
-        <description>BadBehavior 2.2 for Contenido 4.9 - The Web's premier link spam killer. More info about BadBehavior see http://bad-behavior.ioerror.us/</description>
+        <description>BadBehavior 2.2 for Contenido 4.9 - The Web's premier link spam killer.&lt;br/&gt;For more info about BadBehavior see &lt;a target=&quot;_blank&quot; href=&quot;http://bad-behavior.ioerror.us/&quot; &gt;http://bad-behavior.ioerror.us/&lt;/a&gt;</description>
         <author>Ortwin Pinke</author>
         <copyright>Ortwin Pinke</copyright>
         <mail>plugins@php-backoffice.de</mail>
-        <website>http://php-backoffice.de</website>
+        <website>http://php-backoffice.de/badbehavior</website>
         <version>2.0.0</version>
     </general>
     <requirements php="5.2.3">

@@ -1,3 +1,19 @@
+/**
+ * dceBadBehavior JS
+ *
+ * @version    $Rev$
+ * @author     Ortwin Pinke
+ * @copyright  PHP-Backoffice <www.php-backoffice.de>
+ * 
+ * $Id$
+ */
+/*!
+ * minified version of dceBadBehavior JS
+ * @author     Ortwin Pinke
+ * @copyright  PHP-Backoffice <www.php-backoffice.de>
+ * $Id$
+ */
+
 function showProInfo() {
     $("body").trigger("click");
     $("#bb_info").plainModal('open', {
@@ -6,8 +22,7 @@ function showProInfo() {
             top: 100
         }
     });
-}
-;
+};
 
 $(document).ready(function () {
 
@@ -20,7 +35,7 @@ $(document).ready(function () {
 
     var table = $("#badbehavior_data").DataTable({
         language: {
-            url: Con.cfg['urlBackend'] + 'plugins/dceBadBehavior/libs/DataTables/i18n/German.json'
+            url: Con.cfg['urlBackend'] + 'plugins/dceBadBehavior/scripts/i18n/German.json'
         },
         processing: true,
         serverSide: true,
@@ -33,7 +48,9 @@ $(document).ready(function () {
         buttons: [
             {
                 extend: 'selectedSingle',
-                text: 'Show',
+                text: function(dt,button,config) {
+                    return dt.i18n('buttons.show', 'Show');
+                },
                 name: 'show',
                 action: function (e, dt, type, indexes) {
                     console.log(dt.rows({selected: true}).data().toArray());
@@ -72,7 +89,9 @@ $(document).ready(function () {
             },
             {
                 extend: 'collection',
-                text: 'Delete',
+                text: function(dt,button,config) {
+                    return dt.i18n('buttons.delete', 'Delete');
+                },
                 buttons: [
                     {
                         extend: 'selectedSingle',
@@ -91,7 +110,9 @@ $(document).ready(function () {
             },
             {
                 extend: 'collection',
-                text: 'Export',
+                text: function(dt,button,config) {
+                    return dt.i18n('buttons.export', 'Export');
+                },
                 buttons: [
                     {
                         extend: 'copy',

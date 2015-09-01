@@ -21,5 +21,10 @@
 	"oAria": {
 		"sSortAscending":  ": aktivieren, um Spalte aufsteigend zu sortieren",
 		"sSortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
-	}
+	},
+        "buttons": {
+            "show": "Anzeigen",
+            "delete": "Löschen",
+            "export": "Exportieren"
+        }
 }
