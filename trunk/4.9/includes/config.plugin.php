@@ -15,15 +15,20 @@ defined('CON_FRAMEWORK') or die('Illegal call');
 // define plugin cfg
 $cfg['plugins']['dceBadBehavior'] = array(
     'name' => 'dceBadBehavior',
+    'debug' => array(
+        'skip_minify' => TRUE
+    ),
+    'contact_email' => 'bb_not_set@php-backoffice.de', // email is shown on 403-page, set to a valide email
     'tab' => array(
         'bad_behavior' => $cfg['sql']['sqlprefix'] . '_pibad_behavior'
     ),
     'settings' => array(
         'log_table' => $cfg['sql']['sqlprefix'] . '_pibad_behavior',
-        'display_stats' => false,
+        'display_stats' => false, // not tested yet, do not change if you dont know what you are doing
+        // you may change following values to your needs
+        'logging' => true, // log or not
+        'verbose' => false, // log every hit
         'strict' => false,
-        'verbose' => true,
-        'logging' => true,
         'httpbl_key' => '',
         'httpbl_threat' => '25',
         'httpbl_maxage' => '30',

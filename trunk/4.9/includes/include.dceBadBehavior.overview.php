@@ -26,10 +26,8 @@ $oPage->addScript($oPage->getAbsHtmlPath()."libs/DataTables/Buttons-1.0.1/js/but
 $oPage->addScript($oPage->getAbsHtmlPath()."libs/DataTables/plugins/dataTables.select.min.js");
 $oPage->addScript($oPage->getAbsHtmlPath()."scripts/jquery.plainmodal.min.js");
 
-$user = new cApiUser($auth->auth["uid"]);
-
+// set labels and content
 $oPage->set('s', 'LOG_SECTION_H3_HTML', i18n("Bad Behavior Log", "dceBadBehavior"));
-
 
 $oPage->set('s', 'OPTIONS_SECTION_H3_HTML', i18n("Options", "dceBadBehavior"));
 

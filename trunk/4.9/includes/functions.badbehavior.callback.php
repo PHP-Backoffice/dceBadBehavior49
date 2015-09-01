@@ -62,9 +62,11 @@ function bb2_insert($settings, $package, $key) {
 
 // Return emergency contact email address.
 function bb2_email() {
+    $aCfgBB = cRegistry::getConfigValue('plugins', 'dceBadBehavior');
     $oClient = cRegistry::getClient();
     $sEmail = $oClient->getProperty("pi_bad_behavior", "contact_email");
-    return (empty($sEmail)) ? "no_email_set@no_reply.com" : $sEmail; // You need to change this.
+    $sDefaultEmail = (empty($aCfgBB['contact_email']))?"no_email_set@no_reply.com":$aCfgBB['contact_email'];
+    return (empty($sEmail)) ? $sDefaultEmail : $sEmail; // You need to change this.
 }
 
 // retrieve whitelist
