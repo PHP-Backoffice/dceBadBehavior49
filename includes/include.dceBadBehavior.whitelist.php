@@ -5,12 +5,12 @@
  * 
  * @package dceBadBehavior
  * @subpackage GuiPages
- * @version $Rev:$
+ * @version $Rev$
  * @since 4.9.3
  * @author Ortwin Pinke <plugins@php-backoffice.de>
  * @copyright (c) 2012-2015, Ortwin Pinke <www.ortwinpinke.de>
  * 
- * $Id:$
+ * $Id$
  */
 
 defined('CON_FRAMEWORK') || die('Illegal call: Missing framework initialization - request aborted.');

@@ -2,13 +2,13 @@
 /**
  * @package    plugins
  * @subpackage dceBadBehavior
- * @version    $Rev:$
+ * @version    $Rev$
  * @author     Ortwin Pinke
  * @copyright  Ortwin Pinke <www.dceonline.de>
  * @license    GPL
  * @link       http://www.dceonline.de
  *
- *   $Id:$
+ *   $Id$
  */
 
 defined('CON_FRAMEWORK') or die('Illegal call');
