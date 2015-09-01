@@ -18,17 +18,25 @@
     <contenido>
         <areas>
             <area parent="0" menuless="1">dceBadBehavior</area>
+            <area parent="dceBadBehavior" menuless="1">dceBadBehavior_Whitelist</area>
+            <area parent="dceBadBehavior" menuless="1">dceBadBehavior_Blacklist</area>
         </areas>
         <actions>
-            <action area="dceBadBehavior">dceBadBehavior</action>
+            <action area="dceBadBehavior" relevant="0">dceBadBehavior</action>
+            <action area="dceBadBehavior_Whitelist" relevant="0">dceBadBehavior_Whitelist</action>
+            <action area="dceBadBehavior_Blacklist" relevant="0">dceBadBehavior_Blacklist</action>
         </actions>
         <frames>
             <frame area="dceBadBehavior" filetype="main" name="dceBadBehavior/includes/include.dceBadBehavior.overview.php" frameId="4" />
             <frame area="dceBadBehavior" filetype="inc" name="dceBadBehavior/includes/include.dceBadBehavior.ajax.php" frameId="4" />
+            <frame area="dceBadBehavior_Whitelist" filetype="main" name="dceBadBehavior/includes/include.dceBadBehavior.whitelist.php" frameId="4" />
+            <frame area="dceBadBehavior_Blacklist" filetype="main" name="dceBadBehavior/includes/include.dceBadBehavior.blacklist.php" frameId="4" />
         </frames>
         <nav_sub>
             <nav area="dceBadBehavior" level="0" navm="3">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/main</nav>            
-            <nav area="dceBadBehavior" level="1" navm="0">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/overview</nav>
+            <nav area="dceBadBehavior" level="1" navm="0">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/overview</nav>            
+            <nav area="dceBadBehavior_Whitelist" level="1" navm="0">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/whitelist</nav>            
+            <nav area="dceBadBehavior_Blacklist" level="1" navm="0">dceBadBehavior/xml/;navigation/extra/dceBadBehavior/blacklist</nav>
         </nav_sub>
     </contenido>
 </plugin>

@@ -4,7 +4,9 @@
         <extra>
             <dceBadBehavior>
                 <main>Bad Behavior</main>
-                <overview>Overview</overview>
+                <overview>Log</overview>
+                <whitelist>White-List</whitelist>
+                <blacklist>Black-List</blacklist>
             </dceBadBehavior>
         </extra>
     </navigation>
