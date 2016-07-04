@@ -27,7 +27,7 @@ $cfg['plugins']['dceBadBehavior'] = array(
         'display_stats' => false, // not tested yet, do not change if you dont know what you are doing
         // you may change following values to your needs
         'logging' => true, // log or not
-        'verbose' => false, // log every hit
+        'verbose' => true, // log every hit
         'strict' => false,
         'httpbl_key' => '',
         'httpbl_threat' => '25',
